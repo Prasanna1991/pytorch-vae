@@ -96,7 +96,7 @@ for it in range(100000):
 
         c = np.zeros(shape=[mb_size, y_dim], dtype='float32')
         c[:, np.random.randint(0, 10)] = 1.
-	print(c)
+
         c = Variable(torch.from_numpy(c))
         z = Variable(torch.randn(mb_size, Z_dim))
         samples = model.P(z, c).data.numpy()[:16]
